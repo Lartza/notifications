@@ -67,6 +67,10 @@ img.notification-icon {
 	color: #999;
 }
 
+.notification > .notification-delete {
+	display: none;
+}
+
 .notification:hover > .notification-delete {
 	display: block !important;
 	position: absolute;
