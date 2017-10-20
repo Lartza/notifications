@@ -1,0 +1,198 @@
+#notifications {
+	.notifications-button {
+		position: relative;
+		float: right;
+		width: 16px;
+		height: 16px;
+		display: block;
+		border-radius: 50%;
+		text-align: center;
+		padding: 10px;
+		opacity: .6;
+		cursor: pointer;
+
+		.hasNotifications,
+		&:hover,
+		&:focus {
+			opacity: 1 !important;
+		}
+
+		img {
+			cursor: pointer;
+		}
+	}
+
+	.notification-container {
+		background-color: #fff;
+		display: none;
+		position: absolute;
+		right: 13px;
+		top: 45px;
+		width: 350px;
+		max-width: 90%;
+		min-height: 100px;
+		max-height: 260px;
+		border-radius: 0 0 3px 3px;
+		border: 1px solid rgb(238, 238, 238);
+
+		.emptycontent {
+			margin: 50px 0;
+
+			h2 {
+				font-weight: 300;
+				font-size: 16px;
+			}
+		}
+
+		/* Menu arrow */
+		&:after {
+			right: 101px;
+		}
+
+		.notification-wrapper {
+			max-height: 260px;
+			overflow: hidden;
+			overflow-y: auto;
+			margin-right: 3px;
+
+
+			.notification {
+				display: block;
+				padding: 16px 12px;
+				line-height: 1em;
+				color: black;
+				position: relative;
+				clear: both;
+
+				&:not(:last-child) {
+					border-bottom: 1px solid rgb(238, 238, 238);
+				}
+
+				.notification-empty {
+					color: #999;
+				}
+
+				> .notification-delete {
+					display: none;
+
+					&:hover {
+						opacity: 0.8 !important;
+						cursor: pointer;
+					}
+
+					div {
+						cursor: pointer;
+					}
+				}
+
+				&:hover > .notification-delete {
+					display: block !important;
+					position: absolute;
+					top: 7px;
+					right: 12px;
+					opacity: 0.3;
+				}
+
+				img.notification-icon {
+					width: 32px;
+					height: 32px;
+					display: block;
+				}
+
+				.notification-time {
+					text-align: right;
+					opacity: 0.5;
+					padding-right: 32px;
+					margin-top: -7px;
+					position: absolute;
+					right: 0;
+				}
+
+				.button {
+					border: 1px solid rgba(240,240,240,.9) !important;
+					padding: 0 10px;
+					box-shadow: none;
+					margin: 0;
+				}
+
+				.notification-actions {
+					padding: 0;
+					display: inline-block;
+					width: 100%;
+					margin: -6px 0;
+
+					.action-button.primary {
+						color: #fff;
+					}
+
+					&:first-child {
+						margin-left: auto;
+					}
+				}
+
+				.notification-subject {
+					padding-top: 12px;
+					position: relative;
+					margin-right: 20px;
+
+					a {
+						display: inline-block;
+
+						&:not(.full-subject-link) {
+							font-weight: bold;
+							opacity: 1;
+						}
+					}
+
+					> span.image,
+					> span.text,
+					> a > span.image,
+					> a > span.text {
+						display:table-cell;
+						vertical-align:middle;
+					}
+
+					> span.text,
+					> a > span.text {
+						padding-left: 10px;
+					}
+
+					img:not(.notification-icon) {
+						max-width: 32px;
+						max-height: 32px;
+						margin: 0 5px 5px 0;
+					}
+				}
+
+				.avatar {
+					vertical-align: middle;
+					display: inline-block;
+					margin: 0 5px 2px 3px;
+				}
+
+				strong {
+					font-weight: bold;
+					opacity: 1;
+				}
+
+				.notification-message,
+				.notification-full-message {
+					line-height: 20px;
+					padding-bottom: 16px;
+					opacity: .57;
+
+					img {
+						max-width: 32px;
+						max-height: 32px;
+						margin: 0 5px 5px 0;
+					}
+				}
+
+				.avatar-name-wrapper {
+					position: relative;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

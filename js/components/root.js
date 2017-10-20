@@ -13,7 +13,7 @@
 
 	OCA.Notifications.Components.Root = {
 		template: '' +
-		'<div v-if="!shutdown" class="notifications">' +
+		'<div v-if="!shutdown" id="notifications">' +
 		'  <div class="notifications-button menutoggle" :class="{ hasNotifications: notifications.length }">' +
 		'    <img class="svg" alt="" title="' + t('notifications', 'Notifications') + '" :src="iconPath">' +
 		'  </div>' +
